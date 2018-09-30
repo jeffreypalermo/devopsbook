@@ -1,8 +1,10 @@
 # Holistic DevOps on Microsoft
 
 The purpose of this book is to set the minimum bar to create a complete .NET development and devops environment on Azure. We assume that developers are experienced .NET developers with working knowledge of ASP.NET, SQL Server, and running these technologies on Windows Server. We don't assume that the reader has deep Azure experience. The emphasis is on providing .Net developers with the most  productive and high-velocity devops infrastructure and methods available. This book only covers the most common subset of Azure functionality required for implementing popular .NET architectures.  
+##
 
 ## Working Outline
+
 
 1. Introduction/Overview
     * Purpose
