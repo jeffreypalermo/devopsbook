@@ -4,13 +4,31 @@ The purpose of this book is to set the minimum bar to create a complete .NET dev
 
 ## Introduction/Overview
     * Purpose - small to mid-sized .Net teams
+      * problems encountered by these teams
+      * Stats on average age/experience of programmers
+      * Stats on industry average productivity and quality of programmers
     * .Net and Azure - what parts are covered
+      * List of application runtime types (web, job, database, mobile native, desktop, etc)
+      * Arch. overview of example for the book
+      * Walkthrough of deployment options for the application and some forces on why to choose what
     * DevOps - High level overview
+      * Industry state of the art: Phoenix project, DevOps Handbook, Accelerate, state of devops report
+      * DevOps environment architecture overview (diagram) w/ quick overview of the process
 ## Required Tools and Downloads
     * Azure subscription
+      * Rules of thumb for how to set it up, level of isolation, etc. Security, network config
     * Visual Studio 2017
+      * Options and why to choose Enterprise subscription
+      * What types of add-ins to consider and encouraging to use the extension marketplace
     * SQL Server Express 2017
+      * What benefits come from SQL Developer edition vs. express
+      * How to set up SQL Express for development including TCP/IP network enablement
     * Azure DevOps Service organization
+      * Setting up the organization and a project for working thro8ugh this book
+      * Navigating the process templates
+      * Naming projects, git repositories
+      * Creating your board and hiding things until you need them
+      * Encouragement about the marketplace and some interesting extensions
 ## The Basic .Net DevOps Environment
     * Context of quality and productivity problems common in the industry
     * Methodologies that have contributed to the current state of the art
