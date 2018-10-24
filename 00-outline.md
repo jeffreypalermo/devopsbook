@@ -42,29 +42,93 @@ The purpose of this book is to set the minimum bar to create a complete .NET dev
         - Provisioning/configuring server environment
         - Deploying the release
         - Operating/supporting the software release
+     * Introduction to Azure DevOps Services & the different areas
 ## Tracking work
     * Principles
+      * DevOps principles like Make Work Visible
+      * Create an assembly line of swim lanes where every column has an owner and a definition of done
+      * Any column can be the source of a defect that is passed downstream, so each is a workcenter that needs to be managed
+      * Each column needs to have explicit quality control steps to prevent defects from that workcenter to be passed down stream
+      * Scrum-inherited process template and hiding unecessary work items
+      * When to use PBI's, tasks, features, and epics
+      * Metrics you should be getting from your project tracking
     * Tool setup (Azure Boards)
+      * Implementation of each of the principles
+      * Creating the development team
+      * Creating the stakeholder team
     * Roles of the team & responsibilities
+      * The consolidated engineering organization: stakeholders & engineers
+      * Analysis - think up the thinks that might be done
+      * Make decisions about how the implementation should be done (including test scenarios)
+      * Develop
+      * Release
+      * Validation & customer service
     * 4+1 Architecture - how to identify and break down work
+      * Iterative architecture
+      * Process of creating and storing design artifacts in Azure Boards & Azure Repos
 ## Tracking code
     * Principles
+      * Everything is stored in source
+      * One team per repository 
+      * One versioned piece of software per repository
+      * Linking to work items
+      * Choosing branching
     * Tool setup (Azure Repos)
+      * Walkthrough of the setup for our sample application
     * The .Net git repository structure
+      * .Net Core example repo structure we/ directories for what purposes
+      * .Net Framework example repo structure we/ directories for what purposes
     * How team members contribute code (branching/merging/pull request/review & work item tracability)
     * Automating release notes
 ## Building the code
     * Principles
+      * Entire repository builds together - if you don't want it to build together and get the same version number, it needs to be an a separate repository
+      * Private build on dev workstation
+      * Include the database from day 1
+      * Include test suites from day 1
+      * CI Build on ALL branches - and how to label them
+      * Characteristics of a great build (fast, reliable, when it errors, it points to the problem)
     * Tool setup (Azure Pipelines & build script)
+      * Powershell private build
+      * CI Build configuration w/ variables (explanation of why to move away from the built-in step templates as fast as possible.
     * Using the private build
+      * Steps required from the very first versions of the application
+      * Creating database locally in the private build
     * Working with continuous integration
+      * Hosted build vs. your own build agent
+      * Pushing more logic into the git repository
+      * Choosing between YAML and designer builds
     * Integrating database devops into CI
+      * Planning ahead with the setup of your database
+      * Marketplace options: Redgate ReadyRoll, AliaSQL, Roundhouse, etc.
 ## Validating the code
     * Principles
+      * No defects - no managing them - you squash them - if you aren't going to fix it, then call it expected, known behavior and a system limitation: Don't way "our product does this. . . but we have a bug so it really doesn't.  
+      * Move test design ahead of coding - make it part of definition of done
+      * Defect Removeal Efficiency as a measure of quality (Capers Jones research)
+      * 3 QC activities: testing, inspections, static code analysis
+      * Every stage of work needs validation
+      * Measuring defects before release and after
     * Tool setup (test suites, code analysis, etc)
-    * Levels of test automation (unit, integration, acceptance)
+      * Where to track bugs
+      * Setting up pull request inspections
+      * Setting up 3+ levels of automated testing
+      * Setting up levels of static code analysis
+    * Levels of test automation (unit, integration, acceptance) 
+      * deep dive and design considerations
+      * Unit test - what's in, what's out
+      * Integration tests - what's in, what's out
+      * Full system tests - what's in, what's out, how to configure Selenium
+      * Other test suits: security scanning, accessibility, performance, load (high scale), endurance (memory leaks)
     * Static code analysis
+      * VS Code Analysis
+      * ReSharper
+      * NDepende
+      * Sonarqube
+      * Redgate SQL
     * Failing builds from validation problems
+      * Invent ways to fail the build
+   * Packaging test suites that need to be run in deployed environments
 ## Creating a release candidate
     * Principles
     * Tool setup (Azure Artifacts)
