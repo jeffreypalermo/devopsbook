@@ -2,7 +2,7 @@
 
 The purpose of this book is to set the minimum bar to create a complete .NET development and devops environment on Azure. We assume that developers are experienced .NET developers with working knowledge of ASP.NET, SQL Server, and running these technologies on Windows Server. We don't assume that the reader has deep Azure experience. The emphasis is on providing .Net developers with the most  productive and high-velocity devops infrastructure and methods available. This book only covers the most common subset of Azure functionality required for implementing popular .NET architectures.  
 
-## Introduction/Overview
+1. Introduction/Overview
     * Purpose - small to mid-sized .Net teams
       * problems encountered by these teams
       * Stats on average age/experience of programmers
@@ -14,25 +14,26 @@ The purpose of this book is to set the minimum bar to create a complete .NET dev
     * DevOps - High level overview
       * Industry state of the art: Phoenix project, DevOps Handbook, Accelerate, state of devops report
       * DevOps environment architecture overview (diagram) w/ quick overview of the process
-## Required Tools and Downloads
-    * Azure subscription
-      * Rules of thumb for how to set it up, level of isolation, etc. Security, network config
-    * Visual Studio 2017
-      * Options and why to choose Enterprise subscription
-      * What types of add-ins to consider and encouraging to use the extension marketplace
-    * SQL Server Express 2017
-      * What benefits come from SQL Developer edition vs. express
-      * How to set up SQL Express for development including TCP/IP network enablement
-    * Azure DevOps Service organization
-      * Setting up the organization and a project for working thro8ugh this book
-      * Navigating the process templates
-      * Naming projects, git repositories
-      * Creating your board and hiding things until you need them
-      * Encouragement about the marketplace and some interesting extensions
-## The Basic .Net DevOps Environment
+2. Zero to Azure in 60 Minutes (adapted existing content)
+    * content adapted from other docs
+3. The Professional-Grade DevOps Environment
     * Context of quality and productivity problems common in the industry
     * Methodologies that have contributed to the current state of the art
     * Sample app intro (ASP.NET Core & SQL database)
+      * Azure subscription
+      * Rules of thumb for how to set it up, level of isolation, etc. Security, network config
+       * Visual Studio 2017
+         * Options and why to choose Enterprise subscription
+         * What types of add-ins to consider and encouraging to use the extension marketplace
+       * SQL Server Express 2017
+         * What benefits come from SQL Developer edition vs. express
+         * How to set up SQL Express for development including TCP/IP network enablement
+       * Azure DevOps Service organization
+         * Setting up the organization and a project for working thro8ugh this book
+         * Navigating the process templates
+         * Naming projects, git repositories
+         * Creating your board and hiding things until you need them
+         * Encouragement about the marketplace and some interesting extensions
     * Fundamental requirements of a modern development environment (overview)
         - Tracking work
         - Tracking code
@@ -43,7 +44,7 @@ The purpose of this book is to set the minimum bar to create a complete .NET dev
         - Deploying the release
         - Operating/supporting the software release
      * Introduction to Azure DevOps Services & the different areas
-## Tracking work
+4. Tracking work
     * Principles
       * DevOps principles like Make Work Visible
       * Create an assembly line of swim lanes where every column has an owner and a definition of done
@@ -66,7 +67,7 @@ The purpose of this book is to set the minimum bar to create a complete .NET dev
     * 4+1 Architecture - how to identify and break down work
       * Iterative architecture
       * Process of creating and storing design artifacts in Azure Boards & Azure Repos
-## Tracking code
+5. Tracking code
     * Principles
       * Everything is stored in source
       * One team per repository 
@@ -80,7 +81,7 @@ The purpose of this book is to set the minimum bar to create a complete .NET dev
       * .Net Framework example repo structure we/ directories for what purposes
     * How team members contribute code (branching/merging/pull request/review & work item tracability)
     * Automating release notes
-## Building the code
+6. Building the code
     * Principles
       * Entire repository builds together - if you don't want it to build together and get the same version number, it needs to be an a separate repository
       * Private build on dev workstation
@@ -101,7 +102,7 @@ The purpose of this book is to set the minimum bar to create a complete .NET dev
     * Integrating database devops into CI
       * Planning ahead with the setup of your database
       * Marketplace options: Redgate ReadyRoll, AliaSQL, Roundhouse, etc.
-## Validating the code
+7. Validating the code
     * Principles
       * No defects - no managing them - you squash them - if you aren't going to fix it, then call it expected, known behavior and a system limitation: Don't way "our product does this. . . but we have a bug so it really doesn't.  
       * Move test design ahead of coding - make it part of definition of done
@@ -129,21 +130,21 @@ The purpose of this book is to set the minimum bar to create a complete .NET dev
     * Failing builds from validation problems
       * Invent ways to fail the build
    * Packaging test suites that need to be run in deployed environments
-## Creating a release candidate
+8. Creating a release candidate
     * Principles
     * Tool setup (Azure Artifacts)
     * Versioning
     * Designing packaging for application deployment
     * Packaging the web application
     * Packaging the database
-## Provisioning/configuring server environment
+9. Provisioning/configuring server environment
     * Principles
     * Tool setup (Azure subscription)
     * Infrastructure as Code and immutable infrastructure 
     * Azure ARM
     * Azure CLI
     * Provisioning environments for our application
-## Deploying the release
+10. Deploying the release
     * Principles
     * Tool setup (Azure Pipelines release hub)
     * Confinguring our pipeline (3 environments deep)
@@ -151,32 +152,32 @@ The purpose of this book is to set the minimum bar to create a complete .NET dev
     * Deploying IaaS w/ Azure VMs
     * Allowing stakeholders to approve production
     * Cold-start and smoke-testing tactics
-## Operating/supporting the software release
+11. Operating/supporting the software release
     * Principles
     * Tool setup (AppInsights, OMS, etc)
     * Designed for "observability" 
     * Monitoring/alerts in the Azure portal
     * Logging and log centralization with OMS
     * Integrating an incident management workflow (Pick a partner, perhaps PagerDuty, who has VSTS integration.)
-## Modernizing a full framework app to DevOps   
+12. Modernizing a full framework app to DevOps   
     * Principles
     * Tool setup (.Net 4.6.2 (netstandard2))
     * Walkthrough of full framework solution template enabled for DevOps
     * Caveats and holes for reader to fill in
-## Adding an off-line job to our application
+13. Adding an off-line job to our application
     * Principles (design considerations)
     * Architectural options overview
     * Scheduled job as webjob
     * Queue-triggered as Azure function
     * SQL-table polling as Windows service on VM
     * Designing queue-triggered services for scale (2 of them)
-## Advanced deployment options
+14. Advanced deployment options
     * Principles (design options)
     * Azure service fabric
     * Scaled app service
     * AKS
     * SQL Managed instances for complex databases
-## Conclusion
+15. Conclusion
     * Review of architecture/build/testing loop
     * Review "rules of thumb" or 80/20 rule
     * Cover resources for further study
