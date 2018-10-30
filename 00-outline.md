@@ -152,7 +152,7 @@ The purpose of this book is to set the minimum bar to create a complete .NET dev
     * Deploying IaaS w/ Azure VMs
     * Allowing stakeholders to approve production
     * Cold-start and smoke-testing tactics
-11. Operating/supporting the software release
+11. Operating, monitoring & DevOps Diagnostics
     * Principles
     * Tool setup (AppInsights, OMS, etc)
     * Designed for "observability" 
@@ -164,8 +164,8 @@ The purpose of this book is to set the minimum bar to create a complete .NET dev
     * Tool setup (.Net 4.6.2 (netstandard2))
     * Walkthrough of full framework solution template enabled for DevOps
     * Caveats and holes for reader to fill in
-13. Adding an off-line job to our application
-    * Principles (design considerations)
+13. How to make an architectural change in a DevOps environment
+    * Principles (design considerations) (add off-line job to application)
     * Architectural options overview
     * Scheduled job as webjob
     * Queue-triggered as Azure function
